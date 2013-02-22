@@ -30,6 +30,7 @@ if __name__ == '__main__':
   resultQueue = multiprocessing.Queue()
   cpuCount = multiprocessing.cpu_count()
   
+  # create array of computeRandomHashes processes (one for each CPU/core), and store process results into resultQueue
   processes = [multiprocessing.Process(target = computeRandomHashes, args = (resultQueue, secondsToRun,)) for i in range(cpuCount)]
   
   sumCalculated = 0
@@ -39,7 +40,7 @@ if __name__ == '__main__':
     p.start()
   for p in processes:
     p.join()
-    sumCalculated += resultQueue.get()
+    sumCalculated += resultQueue.get() 
   
   print()
   print('Elapsed time: ' + str(datetime.now() - startTime))
