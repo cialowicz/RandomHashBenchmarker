@@ -17,6 +17,6 @@ Usage
 Why?
 ----
 
-I created this tool since not all Amazon AWS EC2 instances of the same type are created equal; some perform measurably worse than others. This little benchmarking script computes a number of random hashes within the specified amount of time [secondsToRun]. It's intended to be run immediately after EC2 instance startup to measure performance. If the results are not favorable (less than [requiredBenchmark]), then the instance can be terminated and replaced.
+I created this tool since not all Amazon AWS EC2 instances of the same type are created equal; some perform measurably worse than others. This little benchmarking script computes a number of random hashes within the specified amount of time [secondsToRun]. It's intended to be run immediately after EC2 instance startup to measure performance. If the results are not favorable (less than `[requiredBenchmark]`), then the instance can be terminated and replaced.
 
-I suggest trying it on several copies of a particular instance type to get a feel for an appropriate [requiredBenchmark] number to use.
+I suggest trying it on several copies of a particular instance type to get a feel for an appropriate `[requiredBenchmark]` number to use.
