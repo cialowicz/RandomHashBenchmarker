@@ -16,7 +16,9 @@ def computeRandomHashes(q, secondsToRun = 10):
     numCalculated += 1
   q.put(numCalculated)
 
-# takes a run
+# Arguments:
+# [secondsToRun] number of seconds for which to run the script
+# [requiredBenchmark] required number of hashes to compute within the specified amount of time
 if __name__ == '__main__':
   usage = 'usage: %s [secondsToRun] [requiredBenchmark]'
   if(len(sys.argv) != 3):
