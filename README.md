@@ -4,7 +4,7 @@ RandomHashBenchmarker
 Overview
 --------
 
-A Python tool which is useful for benchmarking a computer's CPU power. Spawns one random hash computation process per CPU core.
+A Python tool which may be useful for benchmarking. Spawns one random hash computation process per CPU core.
 
 Usage
 -----
